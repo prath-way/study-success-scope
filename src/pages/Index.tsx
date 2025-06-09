@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,10 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, BookOpen, Calendar, ClipboardList, LogOut, History } from "lucide-react";
+import { BookOpen, Calendar, ClipboardList, LogOut, History } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { Logo } from "@/components/Logo";
 
 const Index = () => {
   const { user, loading: authLoading, signOut } = useAuth();
@@ -112,7 +112,7 @@ const Index = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center">
         <div className="text-center">
-          <GraduationCap className="h-12 w-12 text-primary mx-auto mb-4 animate-spin" />
+          <Logo size="lg" className="mx-auto mb-4 animate-spin" />
           <p className="text-muted-foreground">Loading...</p>
         </div>
       </div>
@@ -146,9 +146,7 @@ const Index = () => {
           {/* Prediction Form */}
           <div>
             <div className="text-center mb-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4">
-                <GraduationCap className="h-8 w-8 text-primary-foreground" />
-              </div>
+              <Logo size="lg" className="mx-auto mb-4" />
               <h2 className="text-2xl font-bold text-foreground mb-2">Student Performance</h2>
               <p className="text-muted-foreground">Predict academic success with AI</p>
             </div>

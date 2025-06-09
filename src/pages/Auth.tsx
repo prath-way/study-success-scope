@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "@/hooks/use-toast";
 import { GraduationCap, LogIn, UserPlus } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -79,9 +79,7 @@ const Auth = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4">
-            <GraduationCap className="h-8 w-8 text-primary-foreground" />
-          </div>
+          <Logo size="lg" className="mx-auto mb-4" />
           <h1 className="text-3xl font-bold text-foreground mb-2">Student Performance</h1>
           <p className="text-muted-foreground">
             {isLogin ? "Sign in to your account" : "Create your account"}
